@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #ffffff;
+  font-family: "Vaud", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 80px 40px;
+}
+
+@font-face {
+  font-family: 'Vaud';
+  font-style: normal;
+  font-weight: 200;
+  src: url(./assets/fonts/font-woff2.woff) format("woff")
+}

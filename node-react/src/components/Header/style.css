@@ -1,0 +1,16 @@
+.everpresent-content {
+    border-bottom: 1px solid #E3E9EF;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+}
+
+.everpresent-content__heading {
+    margin-bottom: 16px;
+}
+
+.everpresent-content__subheading {
+    font-size: 24px;
+    font-weight: 300;
+    color: #527084;
+    line-height: 32px;
+}

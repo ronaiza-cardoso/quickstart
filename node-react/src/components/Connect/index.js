@@ -9,7 +9,9 @@ class Connect extends React.Component {
 	handleOnSuccess(token, metadata) {
 		console.log('link: logged');
 		console.log(token, metadata);
+		sessionStorage.setItem('TOKEN', token)
 	}
+
 	handleOnExit(error, metadata) {
 		console.log('link: user exited');
 		console.log(error, metadata);

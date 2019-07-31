@@ -14,7 +14,7 @@ Create one file with the name `config.js` fallowing the structure bellow and get
   };
 ```
 
-After this run `npm start`.
+After this run `npm run dev`.
 
 The sandbox user is:
 ```

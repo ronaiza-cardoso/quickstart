@@ -1,0 +1,14 @@
+.Dashboard__main {
+    display: flex;
+    max-width: 1366px;
+    min-width: 1366px;
+    margin: 0 auto 0;
+    background: #ffffff;
+    min-height: 100%;
+}
+
+.left-section {
+    flex: 0 1 360px;
+    border-right: 1px solid #efeeed;
+    position: inherit;
+}

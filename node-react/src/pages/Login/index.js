@@ -1,5 +1,6 @@
 import React from 'react';
 import PlaidLink from '../../libs/react-plaid-link/dist';
+import axios from 'axios';
 
 import Header from '../../components/Header';
 import ENV from '../../config'
@@ -10,8 +11,11 @@ class Login extends React.Component {
     handleOnSuccess = (token, metadata) => {
 		console.log('link: logged');
 		console.log(token, metadata);
-		sessionStorage.setItem('TOKEN', token)
-		this.props.history.push('/home');
+		axios.post('http://localhost:8001/get_access_token', {
+            public_token: token
+        }).then(resp => {
+			this.props.history.push('/home');
+        })
 	}
 
 	handleOnExit = (error, metadata) => {

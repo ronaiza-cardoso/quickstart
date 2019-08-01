@@ -9,6 +9,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var moment = require('moment');
 var plaid = require('plaid');
+var cors = require('cors');
 
 var PLAID_CLIENT_ID = process.env.PLAID_CLIENT_ID;
 var PLAID_SECRET = process.env.PLAID_SECRET;
@@ -38,13 +39,12 @@ var client = new plaid.Client(PLAID_CLIENT_ID, PLAID_SECRET, PLAID_PUBLIC_KEY, p
 });
 
 var app = express();
-app.use(express.static('public'));
-app.set('view engine', 'ejs');
 app.use(
 	bodyParser.urlencoded({
 		extended: false
 	})
 );
+app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/', function(request, response, next) {

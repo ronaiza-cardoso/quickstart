@@ -1,7 +1,5 @@
 .Dashboard__main-container {
-    height: calc(100% - 62px);
-    margin: 62px auto;
-    overflow-y: auto;
+    margin: auto;
     width: 100%;
 }
 

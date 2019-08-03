@@ -1,0 +1,44 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    height: 90px;
+    overflow: hidden;
+    align-items: center;
+    transition: all 0.4s;
+    flex-direction: column;
+}
+
+ul li a {
+    color: #322828;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    min-height: 97px;
+    text-decoration: none;
+    width: 100%;
+}
+
+ul li a.active {
+    background-color: #f6f6f6;
+    box-shadow: inset -2px 0 0 0 #40c3f6;
+}
+
+ul li a .account-conatiner .account-container h2 {
+    color: #322828;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+ul li a .account-conatiner .balance {
+    height: 18px;
+    transition: all 0.4s;
+}
+
+ul li a .account-conatiner .balance span {
+    color: #322828;
+    font-size: 18px;
+}

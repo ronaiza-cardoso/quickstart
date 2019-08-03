@@ -3,10 +3,10 @@ import { formatAsCurrency } from '../../Util/currency';
 
 import './style.css';
 
-const Item = ({ account }) => {
+const Item = ({ account, selectedAccountId, getSelectedAccount }) => {
 	return (
-		<li key={account.account_id}>
-			<a className="acountItem active" href="/acompanhar/investimentos">
+		<li onClick={evt => getSelectedAccount(account)}>
+			<a className={`Account-item ${selectedAccountId === account.account_id  && 'active'}`}>
 				<div className="account-container">
 					<h2>
 						{account.name}

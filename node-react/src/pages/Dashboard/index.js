@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Item from '../../components/Item'
+import { formatAsCurrency } from '../../Util/currency';
+
+import Item from '../../components/Item';
 
 import './style.css';
 
 export default class Dashboard extends Component {
 	state = {
-		accounts: []
+		accounts: [],
+		selectedAccount: {}
 	};
 	componentDidMount() {
 		axios
@@ -22,6 +25,10 @@ export default class Dashboard extends Component {
 			});
 	}
 
+	getSelectedAccount = acccount => {
+		this.setState({ selectedAccount: acccount, selectedAccountId: acccount.account_id })
+	}
+
 	render() {
 		const getBalance = item => (item.balances.available ? item.balances.available : 0);
 		const total = this.state.accounts.map(getBalance).reduce((cur, acc) => cur + acc, 0);
@@ -31,13 +38,21 @@ export default class Dashboard extends Component {
 					<section className="left-section">
 						<div className="total">
 							<span>Total from Accounts </span>
-							<h1>
-								${total}
-							</h1>
+							<h1>{formatAsCurrency(total)}</h1>
 						</div>
 						<ul>
-							{this.state.accounts.map(account => <Item account={account}/> )}
+							{this.state.accounts.map(account => (
+								<Item
+									key={account.account_id}
+									account={account} 
+									getSelectedAccount={this.getSelectedAccount}
+									selectedAccountId={this.state.selectedAccountId}
+								/>
+							))}
 						</ul>
+					</section>
+					<section className="right-section">
+
 					</section>
 				</div>
 			</main>

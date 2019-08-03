@@ -1,15 +1,18 @@
-var currencyToLocale = {
-    USD: 'en-USD',
+const currencyToLocale = {
+    USD: 'en-US',
     BRL: 'pt-BRL',
     EUR: 'pt-EUR',
 };
 
 export const formatAsCurrency = (value, currency) => {
-	const locale = currencyToLocale[currency];
 	const valueToTransform = value ? value : 0;
+	const defaultCurrency = currency ? currency : 'USD';
+
+	const locale = currencyToLocale[defaultCurrency];
+
 	return valueToTransform.toLocaleString(locale, {
 		style: 'currency',
-		currency: currency,
+		currency: defaultCurrency,
 		minimumFractionDigits: 2
 	});
 }

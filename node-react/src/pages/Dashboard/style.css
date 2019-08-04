@@ -18,6 +18,10 @@
     position: inherit;
 }
 
+.right-section {
+    flex: 1;
+}
+
 .total {
     font-size: 24px;
 }
@@ -28,4 +32,9 @@
 
 .total h1 {
     margin-bottom: 0;
+}
+
+.Account-container > div {
+    width: 350px;
+    margin: 63px auto;
 }

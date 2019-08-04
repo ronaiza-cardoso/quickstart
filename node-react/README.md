@@ -1,6 +1,6 @@
-## Plaid React
+# Plaid React
 
-# Up and running FRONT
+## Up and running FRONT
 
 Create one file with the name `config.js` fallowing the structure bellow and get your API keys [here](https://dashboard.plaid.com/account/keys).
 
@@ -14,7 +14,7 @@ Create one file with the name `config.js` fallowing the structure bellow and get
   };
 ```
 
-# Up and running SERVER
+## Up and running SERVER
 
 Get your configs keys and add into the `.env` inside the server file.
 

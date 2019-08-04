@@ -6,6 +6,7 @@ Here you'll find full example integration apps using our [**client libraries**][
 
 - [Go][go-example]
 - [Node][node-example]
+- [React Node][node-react-example]
 - [Ruby][ruby-example]
 - [Python][python-example]
 - [Java][java-example]
@@ -15,6 +16,7 @@ Here you'll find full example integration apps using our [**client libraries**][
 [quickstart]: https://plaid.com/docs/quickstart
 [libraries]: https://plaid.com/docs/libraries
 [node-example]: /node
+[node-react-example]: /node-react
 [ruby-example]: /ruby
 [python-example]: /python
 [java-example]: /java

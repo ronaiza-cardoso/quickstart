@@ -19,6 +19,9 @@ export default class Dashboard extends Component {
 		selectedAccount: {}
 	};
 	componentDidMount() {
+		if (!sessionStorage.getItem('TOKEN')) {
+			this.props.history.push('/')
+		}
 		axios
 			.get('http://localhost:8001/accounts', {
 				access_token: sessionStorage.TOKEN

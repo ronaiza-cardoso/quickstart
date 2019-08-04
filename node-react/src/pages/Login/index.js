@@ -14,6 +14,7 @@ class Login extends React.Component {
 		axios.post('http://localhost:8001/get_access_token', {
             public_token: token
         }).then(resp => {
+			sessionStorage.setItem('TOKEN', JSON.stringify(resp))
 			this.props.history.push('/home');
         })
 	}
